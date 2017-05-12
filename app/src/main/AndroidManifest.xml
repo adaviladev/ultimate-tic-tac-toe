@@ -9,7 +9,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-<<<<<<< HEAD
         <activity
             android:name=".StartActivity"
             android:label="@string/title_activity_start"
@@ -18,12 +17,6 @@
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-=======
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER"/>
->>>>>>> 7977e0cf70d9c7f82d4a7129f7df0c2326a765bc
             </intent-filter>
         </activity>
     </application>
