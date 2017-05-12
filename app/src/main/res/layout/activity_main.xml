@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -9,3 +10,19 @@
         android:layout_height="wrap_content"
         android:text="TextView" />
 </LinearLayout>
+=======
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hackeysack09.ultimatetictactoe.MainActivity">
+    <TextView
+        android:layout_width="368dp"
+        android:layout_height="495dp"
+        android:text="@string/test"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp" />
+
+</android.support.constraint.ConstraintLayout>
+>>>>>>> 7977e0cf70d9c7f82d4a7129f7df0c2326a765bc
