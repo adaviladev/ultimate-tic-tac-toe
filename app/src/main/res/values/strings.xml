@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">UltimateTicTacToe</string>
     <string name="title_activity_start">Ultimate-Tic-Toe</string>
+    <string name="greetings">Welcome to ULTIMATE-TIC-TAC-TOE</string>
+    <string name="button_string">Click to your heart\'s content</string>
+    <string name="background_description">A background image of tic-tac-toe</string>
 </resources>
