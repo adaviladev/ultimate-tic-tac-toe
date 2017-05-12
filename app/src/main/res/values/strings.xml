@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">UltimateTicTacToe</string>
+    <string name="title_activity_start">Ultimate-Tic-Toe</string>
 </resources>
