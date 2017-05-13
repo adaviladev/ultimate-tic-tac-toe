@@ -58,7 +58,7 @@
 			CodeGeneration
 		</plugin>
 </profile>
-<XMI xmi.version = '1.2' xmlns:UML = 'org.omg.xmi.namespace.UML' timestamp = 'Fri May 12 22:59:46 CDT 2017'>
+<XMI xmi.version = '1.2' xmlns:UML = 'org.omg.xmi.namespace.UML' timestamp = 'Fri May 12 23:07:09 CDT 2017'>
   <XMI.header>    <XMI.documentation>
       <XMI.exporter>ArgoUML (using Netbeans XMI Writer version 1.0)</XMI.exporter>
       <XMI.exporterVersion>0.34(6) revised on $Date: 2010-01-11 22:20:14 +0100 (Mon, 11 Jan 2010) $ </XMI.exporterVersion>
@@ -170,7 +170,7 @@
               </UML:Generalization.parent>
             </UML:Generalization>
             <UML:Class xmi.id = '-64--88-10-1-617f9d61:15bffe0fad8:-8000:0000000000000A7B'
-              name = 'Settings' visibility = 'public' isSpecification = 'false' isRoot = 'false'
+              name = 'Settings?' visibility = 'public' isSpecification = 'false' isRoot = 'false'
               isLeaf = 'false' isAbstract = 'false' isActive = 'false'/>
             <UML:Generalization xmi.id = '-64--88-10-1-617f9d61:15bffe0fad8:-8000:0000000000000A81'
               isSpecification = 'false'>

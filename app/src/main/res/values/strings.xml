@@ -5,4 +5,7 @@
     <string name="button_string">Click to your heart\'s content</string>
     <string name="background_description">A background image of tic-tac-toe</string>
     <string name="test_string">Test string</string>
+
+    <!-- Navigation -->
+    <string name="return_to_previous">Return</string>
 </resources>
