@@ -32,11 +32,12 @@
         android:orientation="vertical"
         android:weightSum="4">
         <Button
+            android:id="@+id/twoPlayerLocal"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_margin="10dp"
             android:layout_weight="1"
-            android:text="@string/test_string"/>
+            android:text="@string/twoPlayerLocal"/>
 
         <Button
             android:layout_width="match_parent"

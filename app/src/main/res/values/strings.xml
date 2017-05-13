@@ -8,4 +8,5 @@
 
     <!-- Navigation -->
     <string name="return_to_previous">Return</string>
+    <string name="twoPlayerLocal">2 Player Local</string>
 </resources>
