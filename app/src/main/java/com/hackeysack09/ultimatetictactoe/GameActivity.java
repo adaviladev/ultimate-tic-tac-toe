@@ -1,20 +1,17 @@
 package com.hackeysack09.ultimatetictactoe;
 
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
+import android.app.Activity;
 
-public class GameActivity extends AppCompatActivity {
+public class GameActivity extends Activity {
 
-  @Override
-  protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_game);
+    private Board gameBoard;
 
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_game);
+        getActionBar().setDisplayHomeAsUpEnabled(true);
+    }
 
-    System.out.println("game start");
-
-  }
 }

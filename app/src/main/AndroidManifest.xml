@@ -19,14 +19,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".GameActivity"
+            android:label="@string/title_activity_game"
             android:parentActivityName=".StartActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-
-            </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.hackeysack09.ultimatetictactoe.StartActivity" />
         </activity>
     </application>
 

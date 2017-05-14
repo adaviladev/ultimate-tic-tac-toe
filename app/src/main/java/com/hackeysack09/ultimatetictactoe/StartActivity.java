@@ -17,17 +17,6 @@ public class StartActivity extends Activity {
 
     click = (Button) findViewById(R.id.button);
 
-    twoPlayerLocalButton = (Button) findViewById(R.id.twoPlayerLocal);
-
-    twoPlayerLocalButton.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View view) {
-                /*Intent gameActivity = new Intent(view.getContext(), GameActivity.class);
-                  StartActivity(gameActivity);
-                 */
-      }
-    });
-
     click.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View view) {
@@ -35,14 +24,17 @@ public class StartActivity extends Activity {
                         ? "This Works!" : getResources().getString(R.string.button_string);
 
         click.setText(result);
+
+        System.out.println("Switch");
       }
     });
+
   }
 
   public void startGame(View view) {
     Intent gameIntent = new Intent(this, GameActivity.class);
 
     System.out.println("Game start");
-//    startActivity(gameIntent);
+    startActivity(gameIntent);
   }
 }
