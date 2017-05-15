@@ -45,7 +45,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/fab_margin"
                 android:layout_weight="1"
-                android:onClick="BoardClick"
+                android:onClick="boardClick"
                 android:text="@string/test_board" />
 
             <Button
@@ -54,7 +54,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/fab_margin"
                 android:layout_weight="1"
-                android:onClick="BoardClick"
+                android:onClick="boardClick"
                 android:text="@string/test_board" />
 
             <Button
@@ -63,7 +63,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/fab_margin"
                 android:layout_weight="1"
-                android:onClick="BoardClick"
+                android:onClick="boardClick"
                 android:text="@string/test_board" />
         </LinearLayout>
 
@@ -80,7 +80,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/fab_margin"
                 android:layout_weight="1"
-                android:onClick="BoardClick"
+                android:onClick="boardClick"
                 android:text="@string/test_board" />
 
             <Button
@@ -89,7 +89,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/fab_margin"
                 android:layout_weight="1"
-                android:onClick="BoardClick"
+                android:onClick="boardClick"
                 android:text="@string/test_board" />
 
             <Button
@@ -98,7 +98,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/fab_margin"
                 android:layout_weight="1"
-                android:onClick="BoardClick"
+                android:onClick="boardClick"
                 android:text="@string/test_board" />
         </LinearLayout>
 
@@ -115,7 +115,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/fab_margin"
                 android:layout_weight="1"
-                android:onClick="BoardClick"
+                android:onClick="boardClick"
                 android:text="@string/test_board" />
 
             <Button
@@ -124,7 +124,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/fab_margin"
                 android:layout_weight="1"
-                android:onClick="BoardClick"
+                android:onClick="boardClick"
                 android:text="@string/test_board" />
 
             <Button
@@ -133,7 +133,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/fab_margin"
                 android:layout_weight="1"
-                android:onClick="BoardClick"
+                android:onClick="boardClick"
                 android:text="@string/test_board" />
         </LinearLayout>
 
