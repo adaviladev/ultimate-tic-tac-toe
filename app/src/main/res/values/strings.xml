@@ -2,12 +2,14 @@
     <string name="app_name">UltimateTicTacToe</string>
     <string name="title_activity_start">Ultimate-Tic-Toe</string>
     <string name="greetings">Welcome to ULTIMATE-TIC-TAC-TOE</string>
-    <string name="button_string">Click to your heart\'s content</string>
     <string name="background_description">A background image of tic-tac-toe</string>
     <string name="test_string">Test string</string>
 
     <!-- Navigation -->
     <string name="return_to_previous">Return</string>
     <string name="twoPlayerLocal">2 Player Local</string>
+    <string name="twoPlayerOnline">Online Multi-player</string>
+    <string name="computerPlayer">Player vs. Computer</string>
+    <string name="settings">Settings</string>
     <string name="title_activity_game">GameActivity</string>
 </resources>
