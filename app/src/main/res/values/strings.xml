@@ -3,7 +3,7 @@
     <string name="title_activity_start">Ultimate-Tic-Toe</string>
     <string name="greetings">Welcome to ULTIMATE-TIC-TAC-TOE</string>
     <string name="background_description">A background image of tic-tac-toe</string>
-    <string name="test_string">Test string</string>
+    <string name="test_board">Test Board</string>
 
     <!-- Navigation -->
     <string name="return_to_previous">Return</string>
