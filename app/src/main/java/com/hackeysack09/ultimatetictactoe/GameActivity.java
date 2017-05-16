@@ -7,6 +7,7 @@ import android.widget.Button;
 
 public class GameActivity extends Activity {
     private Board gameBoard;
+    private Board[][] masterBoard;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

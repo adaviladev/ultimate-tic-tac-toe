@@ -32,53 +32,45 @@
         android:layout_marginTop="75dp"
         app:layout_constraintTop_toBottomOf="@+id/title">
 
-        <!--- Top Row -->
+        <!-- Top Row -->
         <LinearLayout
-            android:layout_width="match_parent"
-            android:background="@color/boardColorOne"
             android:orientation="horizontal"
             android:weightSum="3">
 
-            <Button
-                android:id="@+id/leftTop"
+            <include
+                layout="@layout/board_layout"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/fab_margin"
-                android:layout_weight="1"
-                android:onClick="boardClick"
-                android:text="@string/test_board" />
+                android:layout_weight="1" />
 
-            <Button
-                android:id="@+id/middleTop"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/fab_margin"
-                android:layout_weight="1"
-                android:onClick="boardClick"
-                android:text="@string/test_board" />
-
-            <Button
-                android:id="@+id/rightTop"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/fab_margin"
-                android:layout_weight="1"
-                android:onClick="boardClick"
-                android:text="@string/test_board" />
+            <include layout="@layout/board_layout"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            />
+            <include layout="@layout/board_layout"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            />
         </LinearLayout>
+
 
         <!--- Middle Row -->
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:background="@color/boardColorTwo"
             android:orientation="horizontal"
-            android:weightSum="3">
+            android:weightSum="3"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteY="0dp"
+            tools:layout_editor_absoluteX="8dp">
 
             <Button
                 android:id="@+id/leftCenter"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/fab_margin"
+                android:layout_margin="@dimen/board_margin"
                 android:layout_weight="1"
                 android:onClick="boardClick"
                 android:text="@string/test_board" />
@@ -87,7 +79,7 @@
                 android:id="@+id/middleCenter"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/fab_margin"
+                android:layout_margin="@dimen/board_margin"
                 android:layout_weight="1"
                 android:onClick="boardClick"
                 android:text="@string/test_board" />
@@ -96,7 +88,7 @@
                 android:id="@+id/rightCenter"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/fab_margin"
+                android:layout_margin="@dimen/board_margin"
                 android:layout_weight="1"
                 android:onClick="boardClick"
                 android:text="@string/test_board" />
@@ -104,16 +96,19 @@
 
         <!-- Bottom Row -->
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:background="@color/boardColorThree"
             android:orientation="horizontal"
-            android:weightSum="3">
+            android:weightSum="3"
+            android:layout_height="0dp"
+            tools:layout_editor_absoluteY="0dp"
+            tools:layout_editor_absoluteX="8dp">
 
             <Button
                 android:id="@+id/leftBottom"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/fab_margin"
+                android:layout_margin="@dimen/board_margin"
                 android:layout_weight="1"
                 android:onClick="boardClick"
                 android:text="@string/test_board" />
@@ -122,7 +117,7 @@
                 android:id="@+id/middleBottom"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/fab_margin"
+                android:layout_margin="@dimen/board_margin"
                 android:layout_weight="1"
                 android:onClick="boardClick"
                 android:text="@string/test_board" />
@@ -131,7 +126,7 @@
                 android:id="@+id/rightBottom"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/fab_margin"
+                android:layout_margin="@dimen/board_margin"
                 android:layout_weight="1"
                 android:onClick="boardClick"
                 android:text="@string/test_board" />

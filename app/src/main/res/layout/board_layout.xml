@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:rowCount="3"
+    android:columnCount="1">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/boardColorOne"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <Button
+            android:id="@+id/leftTop"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/board_margin"
+            android:layout_weight="1"
+            android:onClick="boardClick"
+            android:text="@string/test_board" />
+
+        <Button
+            android:id="@+id/middleTop"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/board_margin"
+            android:layout_weight="1"
+            android:onClick="boardClick"
+            android:text="@string/test_board" />
+
+        <Button
+            android:id="@+id/rightTop"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/board_margin"
+            android:layout_weight="1"
+            android:onClick="boardClick"
+            android:text="@string/test_board" />
+    </LinearLayout>
+
+    <!--- Middle Row -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:background="@color/boardColorTwo"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <Button
+            android:id="@+id/leftCenter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/board_margin"
+            android:layout_weight="1"
+            android:onClick="boardClick"
+            android:text="@string/test_board" />
+
+        <Button
+            android:id="@+id/middleCenter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/board_margin"
+            android:layout_weight="1"
+            android:onClick="boardClick"
+            android:text="@string/test_board" />
+
+        <Button
+            android:id="@+id/rightCenter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/board_margin"
+            android:layout_weight="1"
+            android:onClick="boardClick"
+            android:text="@string/test_board" />
+    </LinearLayout>
+
+    <!-- Bottom Row -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:background="@color/boardColorThree"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <Button
+            android:id="@+id/leftBottom"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/board_margin"
+            android:layout_weight="1"
+            android:onClick="boardClick"
+            android:text="@string/test_board" />
+
+        <Button
+            android:id="@+id/middleBottom"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/board_margin"
+            android:layout_weight="1"
+            android:onClick="boardClick"
+            android:text="@string/test_board" />
+
+        <Button
+            android:id="@+id/rightBottom"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/board_margin"
+            android:layout_weight="1"
+            android:onClick="boardClick"
+            android:text="@string/test_board" />
+    </LinearLayout>
+</GridLayout>
