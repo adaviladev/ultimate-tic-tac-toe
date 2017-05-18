@@ -13,6 +13,7 @@
 
         <Button
             android:id="@+id/leftTop"
+            android:background="?android:attr/selectableItemBackground"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/board_margin"
@@ -22,6 +23,7 @@
 
         <Button
             android:id="@+id/middleTop"
+            android:background="?android:attr/selectableItemBackground"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/board_margin"
@@ -31,6 +33,7 @@
 
         <Button
             android:id="@+id/rightTop"
+            android:background="?android:attr/selectableItemBackground"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/board_margin"
@@ -48,6 +51,7 @@
 
         <Button
             android:id="@+id/leftCenter"
+            android:background="?android:attr/selectableItemBackground"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/board_margin"
@@ -57,6 +61,7 @@
 
         <Button
             android:id="@+id/middleCenter"
+            android:background="?android:attr/selectableItemBackground"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/board_margin"
@@ -66,6 +71,7 @@
 
         <Button
             android:id="@+id/rightCenter"
+            android:background="?android:attr/selectableItemBackground"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/board_margin"
@@ -83,6 +89,7 @@
 
         <Button
             android:id="@+id/leftBottom"
+            android:background="?android:attr/selectableItemBackground"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/board_margin"
@@ -92,6 +99,7 @@
 
         <Button
             android:id="@+id/middleBottom"
+            android:background="?android:attr/selectableItemBackground"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/board_margin"
@@ -101,6 +109,7 @@
 
         <Button
             android:id="@+id/rightBottom"
+            android:background="?android:attr/selectableItemBackground"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/board_margin"

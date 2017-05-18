@@ -15,11 +15,7 @@ public class GameActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
         getActionBar().setDisplayHomeAsUpEnabled(true);
-
-        createBoard(View view)
     }
-
-
 
 
 
