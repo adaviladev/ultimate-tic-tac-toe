@@ -3,7 +3,9 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="boardColorOne">#A569BD</color>
+    <color name="boardBackground">#FFF</color>
+    <color name="boardColorOne">#85C1E9</color>
     <color name="boardColorTwo">#3498DB</color>
-    <color name="boardColorThree">#F39C12</color>
+    <color name="boardColorThree">#F7DC6F</color>
+    <color name="blackText">#000000</color>
 </resources>
