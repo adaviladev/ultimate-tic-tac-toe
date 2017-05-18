@@ -42,6 +42,14 @@ public class GameActivity extends Activity {
 
         selected.setText(gameBoard.getClickResult());
 
+        if(gameBoard.getClickResult().equals("X")){
+            selected.setBackground(getResources().getDrawable(R.drawable.selectedred));
+        }
+        else {
+            selected.setBackground(getResources().getDrawable(R.drawable.selectedblue));
+        }
+
+
 
     }
 
