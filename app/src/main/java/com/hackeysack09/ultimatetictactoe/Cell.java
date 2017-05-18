@@ -1,27 +1,18 @@
 package com.hackeysack09.ultimatetictactoe;
 
+import android.content.Context;
+import android.view.ViewGroup;
 
-class Cell {
-    public enum state {UNMARKED, X, O}
-    private state currentState;
+class Cell extends ViewGroup {
+  private Context context;
 
+  Cell(Context context) {
+    super(context);
+    this.context = context;
+  }
 
-    Cell(state newState){
-        currentState = newState;
-    }
+  @Override
+  protected void onLayout(boolean changed, int l, int t, int r, int b) {
 
-
-    state getCurrentState(){
-        return currentState;
-    }
-
-    void setState(state newState){
-        currentState = newState;
-    }
-
-    boolean isNotMarked(){
-        if(getCurrentState() == state.UNMARKED)
-            return true;
-        return false;
-    }
+  }
 }
