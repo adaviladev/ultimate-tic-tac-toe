@@ -2,8 +2,11 @@ package com.hackeysack09.ultimatetictactoe;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.util.AttributeSet;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class GameActivity extends Activity {
@@ -14,55 +17,25 @@ public class GameActivity extends Activity {
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
 
-    gameBoard = new Board(this);
-    gameBoard.initialize();
-    TextView textView = new TextView(this);
-    textView.setText(R.string.greetings);
+    System.out.println("\nGameActivity\n");
+    final TextView textView = new TextView(this);
+    textView.setText(R.string.background_description);
 
-    setContentView(gameBoard);
+    final Board board = new Board(this);
+    System.out.println(textView.getText());
+    Button button = new Button(this);
+    button.setOnClickListener(new View.OnClickListener(){
+      @Override
+      public void onClick(View view) {
+        boardClick(board);
+      }
+    });
+
+    setContentView(button);
   }
 
   public void boardClick(View view) {
     System.out.println(R.string.twoPlayerOnline);
-    /*String position = getResources().getResourceEntryName(view.getId());
-    System.out.println(position);
-
-    Button selected = (Button) findViewById(view.getId());
-
-    switch (position) {
-
-      case "leftTop":
-        gameBoard.makeMove(0, 0);
-        break;
-      case "middleTop":
-        gameBoard.makeMove(0, 1);
-        break;
-      case "rightTop":
-        gameBoard.makeMove(0, 2);
-        break;
-
-      case "leftCenter":
-        gameBoard.makeMove(1, 0);
-        break;
-      case "middleCenter":
-        gameBoard.makeMove(1, 1);
-        break;
-      case "rightCenter":
-        gameBoard.makeMove(1, 2);
-        break;
-
-      case "leftBottom":
-        gameBoard.makeMove(2, 0);
-        break;
-      case "middleBottom":
-        gameBoard.makeMove(2, 1);
-        break;
-      case "rightBottom":
-        gameBoard.makeMove(2, 2);
-        break;
-    }
-
-    selected.setText(gameBoard.getClickResult());*/
 
   }
 

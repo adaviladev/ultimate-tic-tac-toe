@@ -1,11 +1,14 @@
 package com.hackeysack09.ultimatetictactoe;
 
 import android.content.Context;
-import android.view.ViewGroup;
+import android.content.res.TypedArray;
+import android.support.annotation.Nullable;
+import android.util.AttributeSet;
+import android.view.View;
 import android.widget.GridLayout;
 import android.widget.TextView;
 
-class Board extends ViewGroup {
+class Board extends View {
   private Context context;
   private Cell[][] cells;
   private int size = 3;
@@ -14,49 +17,29 @@ class Board extends ViewGroup {
   public int last_col;
 
   public Board(Context context) {
-    super(context);
+    super(context, null);
+    System.out.println("with context");
   }
 
-  @Override
-  protected void onLayout(boolean changed, int l, int t, int r, int b) {
+  public Board(Context context, @Nullable AttributeSet attrs) {
+    super(context, attrs, R.attr.layout);
+    System.out.println("with attrs");
+  }
 
+  public Board(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    super(context, attrs, defStyleAttr, 0);
+    System.out.println("with defStyleAttr");
+  }
+
+  public Board(Context context, @Nullable AttributeSet attrs, int defStyleAttrs, int defStyleRes) {
+    super(context, attrs, defStyleAttrs, defStyleRes);
+    System.out.println("with defStyleRes");
   }
 
   public Board initialize() {
     this.cells = new Cell[size][size];
 
-    /*for (int row = 0; row < size; row++) {
-      for (int col = 0; col < size; col++) {
-        cells[row][col] = new Cell(context , Cell.state.UNMARKED);
-      }
-    }*/
     return this;
   }
-
-  /*void makeMove(int row, int col) {
-
-    if (turns % 2 == 0 && cells[row][col].isNotMarked()) {
-      cells[row][col].setState(Cell.state.X);
-      turns += 1;
-    }
-    if (turns % 2 == 1 && cells[row][col].isNotMarked()) {
-      cells[row][col].setState(Cell.state.O);
-      turns += 1;
-    }
-
-    last_row = row;
-    last_col = col;
-  }
-
-  String getClickResult() {
-    switch (cells[last_row][last_col].getCurrentState()) {
-
-      case X:
-        return "X";
-      case O:
-        return "O";
-    }
-    return "";
-  }*/
 
 }
