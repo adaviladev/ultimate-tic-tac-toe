@@ -22,10 +22,15 @@
         <activity
             android:name=".GameActivity"
             android:label="@string/title_activity_game"
-            android:parentActivityName=".StartActivity">
+            android:parentActivityName=".StartActivity"
+            android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.hackeysack09.ultimatetictactoe.StartActivity" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
         </activity>
     </application>
 

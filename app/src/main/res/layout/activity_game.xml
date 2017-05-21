@@ -1,24 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:custom="http://schemas.android.com/apk/com.hackeysack09.ultimatetictactoe"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.hackeysack09.ultimatetictactoe.GameActivity"
-    >
+    android:padding="@dimen/fab_margin"
+    tools:context="com.hackeysack09.ultimatetictactoe.GameActivity">
 
-    <LinearLayout
+    <com.hackeysack09.ultimatetictactoe.Board
+        android:id="@+id/master_board"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </com.hackeysack09.ultimatetictactoe.Board>
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:baselineAligned="false"
-        android:orientation="horizontal">
-
-        <com.hackeysack09.ultimatetictactoe.Board
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            custom:showText="true"
-            custom:size="3" />
-    </LinearLayout>
-
+        android:id="@+id/guideline"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp"/>
 </android.support.constraint.ConstraintLayout>

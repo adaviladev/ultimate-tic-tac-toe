@@ -1,18 +1,22 @@
 package com.hackeysack09.ultimatetictactoe;
 
 import android.content.Context;
-import android.view.ViewGroup;
+import android.view.View;
 
-class Cell extends ViewGroup {
-  private Context context;
+
+class Cell extends View {
+
+  private enum markings{UNMARKED , X, O}
+
+  private final markings mark;
 
   Cell(Context context) {
     super(context);
-    this.context = context;
+    this.mark = markings.UNMARKED;
   }
 
-  @Override
-  protected void onLayout(boolean changed, int l, int t, int r, int b) {
-
+  public markings getMark() {
+    return mark;
   }
+
 }

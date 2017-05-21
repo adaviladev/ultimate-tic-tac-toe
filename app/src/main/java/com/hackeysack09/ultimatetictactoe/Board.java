@@ -2,44 +2,86 @@ package com.hackeysack09.ultimatetictactoe;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
-import android.widget.GridLayout;
-import android.widget.TextView;
+import android.widget.Button;
+import android.widget.FrameLayout;
 
-class Board extends View {
-  private Context context;
-  private Cell[][] cells;
-  private int size = 3;
-  private int turns = 0;
-  public int last_row;
-  public int last_col;
+class Board extends FrameLayout {
+  private int size;
 
-  public Board(Context context) {
-    super(context, null);
-    System.out.println("with context");
-  }
+  private Button cells[][];
 
-  public Board(Context context, @Nullable AttributeSet attrs) {
-    super(context, attrs, R.attr.layout);
+  public Board(Context context, AttributeSet attrs) {
+    super(context, attrs);
     System.out.println("with attrs");
+
+    TypedArray typedArray = context
+      .obtainStyledAttributes(
+        attrs,
+        R.styleable.Board
+      );
+
+    try {
+      this.size = typedArray.getInteger(R.styleable.Board_size, 3);
+      init();
+      // loopCells();
+    } finally {
+      typedArray.recycle();
+    }
   }
 
-  public Board(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
-    super(context, attrs, defStyleAttr, 0);
-    System.out.println("with defStyleAttr");
+  private void loopCells() {
+    for (int i = 0; i < this.size; i++) {
+      for (int j = 0; j < this.size; j++) {
+        System.out.println(i + "-" + j + " : " + this.cells[i][j]);
+      }
+      System.out.println("\n");
+    }
   }
 
-  public Board(Context context, @Nullable AttributeSet attrs, int defStyleAttrs, int defStyleRes) {
-    super(context, attrs, defStyleAttrs, defStyleRes);
-    System.out.println("with defStyleRes");
+  private void init() {
+    this.cells = new Button[this.size][this.size];
+    for (int i = 0; i < this.size; i++) {
+      for (int j = 0; j < this.size; j++) {
+        Button tempButton = new Button(getContext());
+        tempButton.setWidth(50);
+        tempButton.setTag(i + "_" + j);
+        tempButton.setId(j + 1 + (i * this.size));
+        tempButton.setText(tempButton.getTag().toString());
+        tempButton.setText(((Integer)tempButton.getId()).toString());
+        tempButton.setOnClickListener(clickCell);
+        this.cells[i][j] = tempButton;
+      }
+    }
+    // loopCells();
   }
 
-  public Board initialize() {
-    this.cells = new Cell[size][size];
-
-    return this;
+  public void speak() {
+    System.out.println("Speaking");
   }
+
+  public int getSize() {
+    return size;
+  }
+
+  public void setSize(int size) {
+    this.size = size;
+  }
+
+  public Button[][] getCells() {
+    return cells;
+  }
+
+  public void setCells(Button[][] cells) {
+    this.cells = cells;
+  }
+
+  OnClickListener clickCell = new OnClickListener() {
+    @Override
+    public void onClick(View button) {
+      System.out.println(button.getId());
+    }
+  };
 
 }
