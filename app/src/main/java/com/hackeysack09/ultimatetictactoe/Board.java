@@ -9,11 +9,16 @@ import android.widget.FrameLayout;
 
 class Board extends FrameLayout {
   private int size;
+  private Context context;
+  private AttributeSet attributeSet;
 
-  private Button cells[][];
+  private Cell cells[][];
 
   public Board(Context context, AttributeSet attrs) {
     super(context, attrs);
+
+    this.context = context;
+    this.attributeSet = attrs;
     System.out.println("with attrs");
 
     TypedArray typedArray = context
@@ -41,17 +46,22 @@ class Board extends FrameLayout {
   }
 
   private void init() {
-    this.cells = new Button[this.size][this.size];
+    this.cells = new Cell[this.size][this.size];
     for (int i = 0; i < this.size; i++) {
       for (int j = 0; j < this.size; j++) {
-        Button tempButton = new Button(getContext());
-        tempButton.setWidth(50);
+        Cell tempCell = new Cell(this.context);
+        Button tempButton = new Button(this.context);
+        tempButton.setWidth(100);
+        tempButton.setText(Mark.getRandom(this.size));
         tempButton.setTag(i + "_" + j);
-        tempButton.setId(j + 1 + (i * this.size));
-        tempButton.setText(tempButton.getTag().toString());
-        tempButton.setText(((Integer)tempButton.getId()).toString());
         tempButton.setOnClickListener(clickCell);
-        this.cells[i][j] = tempButton;
+        System.out.println(tempButton.getTag());
+        tempCell.addView(tempButton);
+        tempCell.setTag(i + "_" + j);
+        tempCell.setId(j + 1 + (i * this.size));
+        // tempCell.setMark(tempCell.getTag().toString());
+        // tempCell.setText(((Integer)tempCell.getId()).toString());
+        this.cells[i][j] = tempCell;
       }
     }
     // loopCells();
@@ -69,11 +79,11 @@ class Board extends FrameLayout {
     this.size = size;
   }
 
-  public Button[][] getCells() {
+  public Cell[][] getCells() {
     return cells;
   }
 
-  public void setCells(Button[][] cells) {
+  public void setCells(Cell[][] cells) {
     this.cells = cells;
   }
 

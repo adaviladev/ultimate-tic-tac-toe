@@ -1,22 +1,28 @@
 package com.hackeysack09.ultimatetictactoe;
 
 import android.content.Context;
-import android.view.View;
+import android.content.res.TypedArray;
+import android.util.AttributeSet;
+import android.widget.FrameLayout;
 
 
-class Cell extends View {
+class Cell extends FrameLayout {
 
-  private enum markings{UNMARKED , X, O}
+  // private final boolean isParent;
 
-  private final markings mark;
+  private String mark;
 
   Cell(Context context) {
     super(context);
-    this.mark = markings.UNMARKED;
-  }
+    this.mark = Mark.getUnMarked();
 
-  public markings getMark() {
-    return mark;
+    // try {
+    //   this.isParent = typedArray.getBoolean(R.styleable.Cell_is_parent, false);
+    //   // init();
+    //   // loopCells();
+    // } finally {
+    //   typedArray.recycle();
+    // }
   }
 
 }

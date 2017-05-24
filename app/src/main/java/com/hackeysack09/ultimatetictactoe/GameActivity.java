@@ -26,18 +26,23 @@ public class GameActivity extends Activity {
 
     Board masterBoard = (Board) gameView.findViewById(R.id.master_board);
     int size = masterBoard.getSize();
-    Button cells[][] = masterBoard.getCells();
+    Cell cells[][] = masterBoard.getCells();
     LinearLayout linearLayout = new LinearLayout(this);
     linearLayout.setOrientation(LinearLayout.VERTICAL);
 
     for(int i = 0; i < size; i++){
       LinearLayout row = new LinearLayout(this);
-      row.setLayoutParams(new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+      FrameLayout.LayoutParams frameParams = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+      row.setLayoutParams(frameParams);
       for(int j = 0; j < size; j++){
-        System.out.println(cells[i][j].getText());
-        Button tempButton = cells[i][j];
-        tempButton.setLayoutParams(new FrameLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
-        row.addView(tempButton);
+        System.out.println(cells[i][j].getTag());
+        Cell tempCell = cells[i][j];
+        LinearLayout.LayoutParams linearParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        linearParams.weight = size;
+        // linearParams.height = linearParams.width;
+        tempCell.setLayoutParams(linearParams);
+        // tempCell.setLayoutParams(new FrameLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+        row.addView(tempCell);
 
       }
       linearLayout.addView(row);
