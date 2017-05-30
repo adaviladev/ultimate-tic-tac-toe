@@ -12,7 +12,8 @@
         android:id="@+id/master_board"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:size="3">
+        app:size="3"
+        app:is_parent="true">
     </com.hackeysack09.ultimatetictactoe.Board>
 
     <android.support.constraint.Guideline

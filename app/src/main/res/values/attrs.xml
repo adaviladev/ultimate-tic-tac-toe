@@ -2,9 +2,8 @@
 <resources>
     <declare-styleable name="Board">
         <attr name="size" format="integer"/>
-    </declare-styleable>
-    <declare-styleable name="Cell">
         <attr name="is_parent" format="boolean"/>
-
     </declare-styleable>
+    <!--<declare-styleable name="Cell">-->
+    <!--</declare-styleable>-->
 </resources>

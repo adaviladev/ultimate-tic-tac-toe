@@ -8,7 +8,8 @@ import android.widget.Button;
 import android.widget.FrameLayout;
 
 class Board extends FrameLayout {
-  private int size;
+  public static int size;
+  public static boolean isParent;
   private Context context;
   private AttributeSet attributeSet;
 
@@ -28,7 +29,9 @@ class Board extends FrameLayout {
       );
 
     try {
-      this.size = typedArray.getInteger(R.styleable.Board_size, 3);
+      Board.size = typedArray.getInteger(R.styleable.Board_size, 3);
+      Board.isParent = typedArray.getBoolean(R.styleable.Board_is_parent, false);
+      System.out.println("Is parent: " + Board.isParent);
       init();
       // loopCells();
     } finally {
@@ -37,8 +40,8 @@ class Board extends FrameLayout {
   }
 
   private void loopCells() {
-    for (int i = 0; i < this.size; i++) {
-      for (int j = 0; j < this.size; j++) {
+    for (int i = 0; i < Board.size; i++) {
+      for (int j = 0; j < Board.size; j++) {
         System.out.println(i + "-" + j + " : " + this.cells[i][j]);
       }
       System.out.println("\n");
@@ -46,24 +49,19 @@ class Board extends FrameLayout {
   }
 
   private void init() {
-    this.cells = new Cell[this.size][this.size];
-    for (int i = 0; i < this.size; i++) {
-      for (int j = 0; j < this.size; j++) {
-        Cell tempCell = new Cell(this.context);
-        Button tempButton = new Button(this.context);
-        tempButton.setWidth(100);
-        tempButton.setText(Mark.getRandom(this.size));
-        tempButton.setTag(i + "_" + j);
-        tempButton.setOnClickListener(clickCell);
-        System.out.println(tempButton.getTag());
-        tempCell.addView(tempButton);
+    this.cells = new Cell[Board.size][Board.size];
+    for (int i = 0; i < Board.size; i++) {
+      for (int j = 0; j < Board.size; j++) {
+        Cell tempCell = new Cell(this.context, null);
+        // tempCell.addView(tempButton);
         tempCell.setTag(i + "_" + j);
-        tempCell.setId(j + 1 + (i * this.size));
+        tempCell.setId(j + 1 + (i * Board.size));
         // tempCell.setMark(tempCell.getTag().toString());
         // tempCell.setText(((Integer)tempCell.getId()).toString());
         this.cells[i][j] = tempCell;
       }
     }
+    Board.isParent = false;
     // loopCells();
   }
 
@@ -76,7 +74,7 @@ class Board extends FrameLayout {
   }
 
   public void setSize(int size) {
-    this.size = size;
+    Board.size = size;
   }
 
   public Cell[][] getCells() {
@@ -86,12 +84,5 @@ class Board extends FrameLayout {
   public void setCells(Cell[][] cells) {
     this.cells = cells;
   }
-
-  OnClickListener clickCell = new OnClickListener() {
-    @Override
-    public void onClick(View button) {
-      System.out.println(button.getId());
-    }
-  };
 
 }
