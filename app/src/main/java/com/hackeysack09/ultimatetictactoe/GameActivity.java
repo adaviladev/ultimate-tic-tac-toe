@@ -50,4 +50,19 @@ public class GameActivity extends Activity {
     System.out.println("\nafter speaking\n");
     setContentView(gameView);
   }
+
+  protected void createBoardGame(){
+      // method to create session row if it can't find a board game on the database side
+  }
+
+
+  protected void updateBoardGame(){
+      // sends updated version of board to api and database side
+
+  }
+
+
+  protected void deleteBoardGame(){
+      // method that cleans up board after game is finished
+  }
 }
