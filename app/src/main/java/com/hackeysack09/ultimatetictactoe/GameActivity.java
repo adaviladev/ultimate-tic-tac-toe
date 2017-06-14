@@ -13,9 +13,14 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+import java.io.IOException;
 import java.util.ArrayList;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.io.DataOutputStream;
 
 public class GameActivity extends Activity {
+    static String api_url = "10.0.3.2";
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -53,16 +58,76 @@ public class GameActivity extends Activity {
 
   protected void createBoardGame(){
       // method to create session row if it can't find a board game on the database side
+      api_url +="/create";
+      DataOutputStream writer;
+      try {
+          URL api = new URL(api_url);
+          HttpURLConnection httpURLConnection = (HttpURLConnection) api.openConnection();
+
+          if(httpURLConnection.getResponseCode() == 200){
+              writer = new DataOutputStream(httpURLConnection.getOutputStream());
+
+              writer.writeBytes("fake ip address");
+
+          }
+      } catch(IOException e){
+          System.out.println("can't read from url");
+          System.out.println(e.getMessage());
+      }
+
+
+      //part that listens for response from api
+
+
+
+
+
   }
 
 
   protected void updateBoardGame(){
       // sends updated version of board to api and database side
+      api_url +="/update";
+      DataOutputStream writer;
+      try {
+          URL api = new URL(api_url);
+          HttpURLConnection httpURLConnection = (HttpURLConnection) api.openConnection();
+
+          if(httpURLConnection.getResponseCode() == 200){
+              writer = new DataOutputStream(httpURLConnection.getOutputStream());
+
+              writer.writeBytes("fake ip address");
+
+          }
+      } catch(IOException e){
+          System.out.println("can't read from url");
+          System.out.println(e.getMessage());
+      }
+
+      //part that listens for response from api
 
   }
 
 
   protected void deleteBoardGame(){
       // method that cleans up board after game is finished
+      api_url +="/delete";
+      DataOutputStream writer;
+      try {
+          URL api = new URL(api_url);
+          HttpURLConnection httpURLConnection = (HttpURLConnection) api.openConnection();
+
+          if(httpURLConnection.getResponseCode() == 200){
+              writer = new DataOutputStream(httpURLConnection.getOutputStream());
+
+              writer.writeBytes("fake ip address");
+
+          }
+      } catch(IOException e){
+          System.out.println("can't read from url");
+          System.out.println(e.getMessage());
+      }
   }
+
+    //part that listens for response from api
 }
